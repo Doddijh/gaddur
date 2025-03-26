@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaddur - Ís með karakter</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ===============================
+       GRUNNSTILLINGAR
+    =============================== */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* LITIR sem tengjast bragðamerkjunum */
+    :root {
+      --green: #01ff01;      
+      --yellow: #fde837;     
+      --brown: #caa47f;      
+      --highlight: #5b86e5;  
+    }
+
+    /* ===============================
+       HAUS (HEADER) MEÐ LEIÐARKERFI
+    =============================== */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo {
+      max-width: 120px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    /* ===============================
+       HERO - stóru svæðin efst
+    =============================== */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, var(--highlight), #36d1dc);
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+      max-width: 600px;
+    }
+    .hero a.cta-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #fff;
+      color: var(--highlight);
+      font-weight: 700;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .hero a.cta-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* ===============================
+       BRÖGÐIN (PRODUCT SHOWCASE)
+    =============================== */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 4px;
+      background-color: var(--highlight);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .flavors-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .flavor-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 1rem;
+    }
+    .flavor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .flavor-card img {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+    .flavor-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .flavor-desc {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    /* ===============================
+       UM OKKUR
+    =============================== */
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .about p {
+      max-width: 700px;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* ===============================
+       FOOTER
+    =============================== */
+    footer {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+    }
+    .social-links {
+      margin: 1rem 0;
+    }
+    .social-links a {
+      margin: 0 0.5rem;
+      color: #666;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+    .social-links a:hover {
+      color: var(--highlight);
+    }
+
+    /* ===============================
+       RESPONSIVE
+    =============================== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header>
+    <img src="logo.png" alt="Gaddur Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#hero">Heim</a></li>
+        <li><a href="#flavors">Brögðin</a></li>
+        <li><a href="#about">Um okkur</a></li>
+        <li><a href="#stores">Hvar fæst?</a></li>
+        <li><a href="#contact">Hafðu samband</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <h1>Gaddur</h1>
+    <p>Ís með karakter – skemmtilegir bragðmöguleikar sem gleðja bragðlaukana!</p>
+    <a href="#flavors" class="cta-btn">Skoða Brögðin</a>
+  </section>
+
+  <!-- ========== BRÖGÐIN (PRODUCT SHOWCASE) ========== -->
+  <section id="flavors">
+    <h2 class="section-title">Brögðin okkar</h2>
+    <div class="flavors-container">
+      
+      <!-- Dæmi: Kúamykja -->
+      <div class="flavor-card">
+        <img src="kuamykja.png" alt="Kúamykja" />
+        <div class="flavor-name">Kúamykja</div>
+        <div class="flavor-desc">Súkkulaði með smá tvisti – algjör sæla!</div>
+      </div>
+
+      <!-- Dæmi: Klaufsýking -->
+      <div class="flavor-card">
+        <img src="klaufsyking.png" alt="Klaufsýking" />
+        <div class="flavor-name">Klaufsýking</div>
+        <div class="flavor-desc">Fersk piparmynta sem kælir og kætir.</div>
+      </div>
+
+      <!-- Dæmi: Júgurbólga -->
+      <div class="flavor-card">
+        <img src="jugurbolga.png" alt="Júgurbólga" />
+        <div class="flavor-name">Júgurbólga</div>
+        <div class="flavor-desc">Vanillu og kókos – dásamleg suðrænn blær.</div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ========== UM OKKUR ========== -->
+  <section id="about">
+    <h2 class="section-title">Um okkur</h2>
+    <div class="about">
+      <p>
+        Ísinn okkar er meira en bara eftirréttur. þetta er upplifun. Frá góða bragðinu að skemmtilegu og jafnvel aðeins ógeðslegu nöfnunum, er markmiðið okkar að taka hugmynd sem ætti ekki að virka og láta hana virka.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== HVAR FÆST? ========== -->
+  <section id="stores">
+    <h2 class="section-title">Hvar fæst Gaddur?</h2>
+    <p>
+      Ísinn fæst aðeins tímabundið í vörumessunni 
+      <strong>31. mars í Vestrahúsinu, Ísafirði.</strong>  
+      Endilega kíktu og smakkaðu!
+    </p>
+  </section>
+
+  <!-- ========== HAFA SAMBAND ========== -->
+  <section id="contact">
+    <h2 class="section-title">Hafðu samband</h2>
+    <p>Viltu vita meira um fyrirtækið, panta ís eða senda okkur kveðju? Endilega hafðu samband!</p>
+    <form class="contact-form" action="mailto:ronjagaddur@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Nafn:</label>
+      <input type="text" id="name" name="name" placeholder="Skrifaðu nafnið þitt" />
+
+      <label for="email">Netfang:</label>
+      <input type="email" id="email" name="email" placeholder="Skrifaðu netfangið þitt" />
+
+      <label for="message">Skilaboð:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Skrifaðu skilaboðin þín"></textarea>
+
+      <button type="submit">Senda</button>
+    </form>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/gaddur.is" target="_blank">Instagram (@gaddur.is)</a>
+    </div>
+    &copy; <span id="year"></span> Gaddur. Öll réttindi áskilin.
+  </footer>
+
+  <!-- JavaScript til að setja inn núverandi ár -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
