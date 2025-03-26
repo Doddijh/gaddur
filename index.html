@@ -162,6 +162,37 @@
     }
 
     /* ===============================
+       MERCH - Ronju Merch
+    =============================== */
+    .merch {
+      padding: 4rem 2rem;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    .merch .section-title {
+      margin-bottom: 1rem;
+    }
+    .merch p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.5;
+    }
+    .merch a.cta-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--highlight);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .merch a.cta-btn:hover {
+      background-color: #4a6edc;
+    }
+
+    /* ===============================
        UM OKKUR
     =============================== */
     .about {
@@ -200,6 +231,43 @@
     }
     .social-links a:hover {
       color: var(--highlight);
+    }
+
+    /* ===============================
+       BÆTT STÍL FYRIR CONTACT FORM
+    =============================== */
+    .contact-form {
+      max-width: 600px;
+      margin: 2rem auto 0; /* 2rem ofan, 0 neðan */
+      text-align: left;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      display: inline-block;
+      background-color: var(--highlight);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 5px;
+      padding: 0.8rem 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: #4a6edc;
     }
 
     /* ===============================
@@ -270,12 +338,19 @@
     </div>
   </section>
 
+  <!-- ========== MERCH - RONJU MERCH ========== -->
+  <section class="merch" id="merch">
+    <h2 class="section-title">Ronju Merch</h2>
+    <p>Uppgötvaðu nýja Ronju merch – stílhrein og skemmtileg tíska sem endurspeglar anda Ronju okkar. Smelltu á takkann hér fyrir neðan til að skoða online búðina.</p>
+    <a href="https://shop.gaddur.is" class="cta-btn" target="_blank">Kaupa Ronju Merch</a>
+  </section>
+
   <!-- ========== UM OKKUR ========== -->
   <section id="about">
     <h2 class="section-title">Um okkur</h2>
     <div class="about">
       <p>
-        Ísinn okkar er meira en bara eftirréttur. þetta er upplifun. Frá góða bragðinu að skemmtilegu og jafnvel aðeins ógeðslegu nöfnunum, er markmiðið okkar að taka hugmynd sem ætti ekki að virka en láta það virka.
+        Ísinn okkar er meira en bara eftirréttur. þetta er upplifun. Frá góðu brögðunum að skemmtilegu og jafnvel smá ógeðslegu nöfnunum, er markmiðið okkar að taka hugmynd sem ætti ekki að virka en láta hana virka.
       </p>
     </div>
   </section>
@@ -293,7 +368,7 @@
   <!-- ========== HAFA SAMBAND ========== -->
   <section id="contact">
     <h2 class="section-title">Hafðu samband</h2>
-    <p>Viltu vita meira um Gaddur, panta ís eða senda okkur kveðju? Endilega hafðu samband!</p>
+    <p>Viltu vita meira um fyrirtækið, panta ís eða senda okkur kveðju? Endilega hafðu samband!</p>
     <form class="contact-form" action="mailto:ronjagaddur@gmail.com" method="post" enctype="text/plain">
       <label for="name">Nafn:</label>
       <input type="text" id="name" name="name" placeholder="Skrifaðu nafnið þitt" />
@@ -302,7 +377,7 @@
       <input type="email" id="email" name="email" placeholder="Skrifaðu netfangið þitt" />
 
       <label for="message">Skilaboð:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Skrifaðu skilaboðin þín"></textarea>
+      <textarea id="message" name="message" rows="5" placeholder="Skrifaðu skilaboðin hér..."></textarea>
 
       <button type="submit">Senda</button>
     </form>
