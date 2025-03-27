@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaddur - Hvar fæst?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.png" alt="Gaddur Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Heim</a></li>
+        <li><a href="brogdin.html">Brögðin</a></li>
+        <li><a href="um-okkur.html">Um okkur</a></li>
+        <li><a href="hvar-faest.html" style="color: var(--highlight);">Hvar fæst?</a></li>
+        <li><a href="hafa-samband.html">Hafðu samband</a></li>
+        <li><a href="https://shop.gaddur.is" target="_blank">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT: Hvar fæst? -->
+  <section>
+    <h1>Hvar fæst Gaddur?</h1>
+    <p>
+      Ísinn fæst aðeins tímabundið í vörumessunni 
+      <strong>3. apríl í Vestrahúsinu, Suðurgötu 12, Ísafirði.</strong>
+      Endilega kíktu og smakkaðu!
+    </p>
+
+    <!-- Google Maps embed (miðjað með inline-stíl) -->
+    <div style="margin: 2rem auto; max-width: 800px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1618.4208761561367!2d-23.128554522474797!3d66.06890277854757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f2b1fe55dd384cf%3A0x6b97f001bca1a1a6!2zU3XDsHVyZ2F0YSAxMiwgNDAwIMONc2FmasO2csOwdXI!5e0!3m2!1sen!2sis!4v1743085023050!5m2!1sen!2sis" 
+        width="800" 
+        height="600" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/gaddur.is" target="_blank">Instagram (@gaddur.is)</a>
+    </div>
+    &copy; <span id="year"></span> Gaddur. Öll réttindi áskilin.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

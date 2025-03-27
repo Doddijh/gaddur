@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gaddur - Heim</title>
+  <title>Gaddur - Hafðu samband</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,21 +12,32 @@
     <img src="images/logo.png" alt="Gaddur Logo" class="logo">
     <nav>
       <ul>
-        <li><a href="index.html" style="color: var(--highlight);">Heim</a></li>
+        <li><a href="index.html">Heim</a></li>
         <li><a href="brogdin.html">Brögðin</a></li>
         <li><a href="um-okkur.html">Um okkur</a></li>
         <li><a href="hvar-faest.html">Hvar fæst?</a></li>
-        <li><a href="hafa-samband.html">Hafðu samband</a></li>
+        <li><a href="hafa-samband.html" style="color: var(--highlight);">Hafðu samband</a></li>
         <li><a href="https://shop.gaddur.is" target="_blank">Shop</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>Gaddur</h1>
-    <p>Ís með karakter – skemmtilegir bragðmöguleikar sem gleðja bragðlaukana!</p>
-    <a href="brogdin.html" class="cta-btn">Skoða Brögðin</a>
+  <!-- MAIN CONTENT: Hafðu samband -->
+  <section>
+    <h1>Hafðu samband</h1>
+    <p>Viltu vita meira um fyrirtækið, panta ís eða senda okkur kveðju? Endilega hafðu samband!</p>
+    <form class="contact-form" action="mailto:ronjagaddur@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Nafn:</label>
+      <input type="text" id="name" name="name" placeholder="Skrifaðu nafnið þitt">
+      
+      <label for="email">Netfang:</label>
+      <input type="email" id="email" name="email" placeholder="Skrifaðu netfangið þitt">
+      
+      <label for="message">Skilaboð:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Skrifaðu skilaboðin hér..."></textarea>
+      
+      <button type="submit">Senda</button>
+    </form>
   </section>
 
   <!-- FOOTER -->
