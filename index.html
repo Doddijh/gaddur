@@ -9,7 +9,10 @@
 <body>
   <!-- HEADER -->
   <header>
-    <img src="images/logo.png" alt="Gaddur Logo" class="logo">
+    <!-- Lógó sem linkur á forsíðu -->
+    <a href="index.html">
+      <img src="images/logo.png" alt="Gaddur Logo" class="logo">
+    </a>
     <nav>
       <ul>
         <li><a href="index.html" style="color: var(--highlight);">Heim</a></li>
@@ -22,11 +25,16 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO (valfrjálst) -->
   <section class="hero">
-    <h1>Gaddur</h1>
+    <h1>Velkomin á Gaddur</h1>
     <p>Ís með karakter – skemmtilegir bragðmöguleikar sem gleðja bragðlaukana!</p>
     <a href="brogdin.html" class="cta-btn">Skoða Brögðin</a>
+  </section>
+
+  <!-- NÝJA MYNDIN - Banner/kúamyndin -->
+  <section class="banner-section">
+    <img src="images/gaddur-banner.jpg" alt="Gaddur Banner" class="banner-image">
   </section>
 
   <!-- FOOTER -->
@@ -38,6 +46,7 @@
   </footer>
 
   <script>
+    // Setur núverandi ár
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
