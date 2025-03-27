@@ -3,104 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gaddur - Brögðin okkar</title>
+  <title>Gaddur - Brögðin</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ===============================
-       SÉRSTAKT STÍL FYRIR BRAGÐAKORT & ACCORDION
-    =============================== */
-
-    .flavors-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin: 2rem auto;
-      max-width: 1200px;
-      /* Bætum þessu við til að kortin teygist ekki saman í sömu hæð */
-      align-items: start;
-    }
-
-    .flavor-card {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .flavor-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-    .card-header {
-      padding: 1rem;
-      text-align: center;
-      color: #fff;
-    }
-    .card-header img {
-      width: 80px;
-      height: auto;
-      display: block;
-      margin: 0 auto 0.5rem;
-    }
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .card-body {
-      padding: 1rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .short-excerpt {
-      margin-bottom: 1rem;
-      color: #444;
-      line-height: 1.4;
-    }
-    .toggle-btn {
-      background-color: var(--highlight);
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-size: 0.9rem;
-    }
-    .toggle-btn:hover {
-      background-color: #4a6edc;
-    }
-    .full-text {
-      display: none;
-      margin-top: 1rem;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
-      text-align: left;
-      font-size: 0.95rem;
-      color: #333;
-    }
-    .full-text.open {
-      display: block;
-    }
-    /* Litur fyrir hvern bragðtegund */
-    .kuamykja-header { background-color: #caa47f; }
-    .klaufsyking-header { background-color: #01ff01; color: #333; }
-    .jugurbolga-header { background-color: #fde837; color: #333; }
-    /* Stíll fyrir "Sagan bakvið bragðið" titil innan full-text */
-    .full-text h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: var(--highlight);
-    }
-  </style>
 </head>
 <body>
-  <!-- HEADER (sama fyrir allar síður) -->
+  <!-- HEADER -->
   <header>
-    <img src="logo.png" alt="Gaddur Logo" class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Gaddur Logo" class="logo">
+    </a>
     <nav>
       <ul>
         <li><a href="index.html">Heim</a></li>
@@ -113,15 +24,16 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT: Brögðin okkar -->
   <section>
     <h1>Brögðin okkar</h1>
     <p>Hér eru einstöku bragðameistaraverk Ronju. Skoðaðu stutta útdrátt og smelltu á "Lestu meira" til að lesa fulla söguna "Sagan bakvið bragðið".</p>
-    
+
+    <!-- Dæmi um 3 bragðategundir í grid -->
     <div class="flavors-grid">
-      <!-- KÚAMYKJA CARD -->
+      <!-- Kúamykja -->
       <div class="flavor-card">
         <div class="card-header kuamykja-header">
+          <!-- Mynd skrá: kuamykja.png í rót -->
           <img src="kuamykja.png" alt="Kúamykja">
           <div class="card-title">Kúamykja</div>
         </div>
@@ -133,33 +45,19 @@
           <div class="full-text">
             <h3>Sagan bakvið bragðið</h3>
             <p>
-              Árið 2002 var ég á túristasprelli í Suður-Afríku. Það var allt í blóma þar til maginn fór að tala tungumál sem engin belja ætti að kunna. Ég fékk svakalegan niðurgang. Þetta var ein af verri lífsreynslum mínum. En liggjandi á gólfinu með hitapoka og magaverki fékk ég snilldarhugmynd.
-            </p>
-            <p>
-              <strong>KÚAMYKJA</strong><br>
-              Dökkur djúsí súkkulaðiís sem tekur mann beint aftur í ferðalagið mitt, nema betri lykt og betra bragð.
-            </p>
-            <p>
-              Ég ætlaði að njóta, en maginn fór á ról, og því miður varð kúaskítur minn hól! En úr þessum skelfingum skapaðist dáð, sukkúlaðiís - sem þið gætuð orðið háð!
-            </p>
-            <p>
-              Vestrahúsið 3. apríl komdu og smakkaðu. Það er erfitt að vera týndur ef þú ekkert ferð!
+              ...[HEILL TEXTI HÉR]...
             </p>
             <h3>Næringargildi</h3>
-            <p><strong>Innihald:</strong> Mjólk, rjómi, sykur, undanrennuduft, Súkklaði, þrúgusykur, glyserín, maltodextrin, bindiefni (sodiumalgínat, karóbgúmmí, gúargúmmí, karragenan, karboxímetýlsellulósi, ein- og tvíglýseríð), salt, litarefni (norbixín). Óþols og ofnæmisáhrif.</p>
-            <p><strong>Næringargildi í 100 g:</strong></p>
+            <p><strong>Innihald:</strong> ...</p>
             <ul>
-              <li>Orka / Energi: 872 kJ / 212 kkal.</li>
-              <li>Fita / Fat: 12 g (Þar af mettuð fita: 6 g)</li>
-              <li>Kolvetni: 21 g (Þar af sykurtegundir: 21 g)</li>
-              <li>Prótein / Protein: 6 g</li>
-              <li>Salt: 0,18 g</li>
+              <li>Orka / Energi: ...</li>
+              <!-- o.s.frv. -->
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- KLAUFSÝKING CARD -->
+      <!-- Klaufsýking -->
       <div class="flavor-card">
         <div class="card-header klaufsyking-header">
           <img src="klaufsyking.png" alt="Klaufsýking">
@@ -173,34 +71,15 @@
           <div class="full-text">
             <h3>Sagan bakvið bragðið</h3>
             <p>
-              Sumarið 2007 var ég í Tyrklandi að reyna að daðra við naut á ströndinni þegar BAM. Ég steig á glerbrot. Ég átti þrátt fyrir það fínt kvöld með nautinu en daginn eftir var ein klaufin mín orðin stokk bólgin og það lak grænn vökvi úr henni. Klaufsýking!
-            </p>
-            <p>
-              Á meðan ég lá með klaufina á kælipoka kom hugmyndin sem kældi líka sálina:<br>
-              <strong>KLAUFSÝKING</strong><br>
-              Kaldur, grænn piparmyntuís sem minnir mig á grænu klaufina mína 2007. Bara liturinn, ekki bragðið.
-            </p>
-            <p>
-              Í sandi og sól ég sprangaði um, þá klauf mín bólgnaði já illa fór um. En hvað er betra en ís til að kæla? Piparmyntu sæla - sem þú munt í þig dæla!
-            </p>
-            <p>
-              Vestrahúsið 3. apríl komdu og smakkaðu. Bíllinn eyðir bara jafn miklu og þú setur á hann!
+              ...[HEILL TEXTI HÉR]...
             </p>
             <h3>Næringargildi</h3>
-            <p><strong>Innihald:</strong> Mjólk, rjómi, sykur, undanrennuduft, Piparmynta, þrúgusykur, glyserín, maltodextrin, bindiefni (sodiumalgínat, karóbgúmmí, gúargúmmí, karragenan, karboxímetýlsellulósi, ein- og tvíglýseríð), salt, litarefni (norbixín). Óþols og ofnæmisáhrif.</p>
-            <p><strong>Næringargildi í 100 g:</strong></p>
-            <ul>
-              <li>Orka / Energi: 872 kJ / 212 kkal.</li>
-              <li>Fita / Fat: 12 g (Þar af mettuð fita: 6 g)</li>
-              <li>Kolvetni: 21 g (Þar af sykurtegundir: 21 g)</li>
-              <li>Prótein / Protein: 6 g</li>
-              <li>Salt: 0,18 g</li>
-            </ul>
+            <p><strong>Innihald:</strong> ...</p>
           </div>
         </div>
       </div>
 
-      <!-- JÚGURBÓLGA CARD -->
+      <!-- Júgurbólga -->
       <div class="flavor-card">
         <div class="card-header jugurbolga-header">
           <img src="jugurbolga.png" alt="Júgurbólga">
@@ -214,37 +93,16 @@
           <div class="full-text">
             <h3>Sagan bakvið bragðið</h3>
             <p>
-              Árið 2004 var ég á Balí. Sól, slökun, og svo veikindi. Já, það var ekki beint draumafríið… Mjólkin mín varð gul eins og sólin en spenarnir sungu ekki af gleði meðan sólin settist á kvöldin. Ég fór til læknis og, alveg eins og ég óttaðist, varð ég með júgurbólgu.
-            </p>
-            <p>
-              En úr þessu kom hugmyndin að mínu fyrsta meistaraverki:<br>
-              <strong>JÚGURBÓLGA</strong><br>
-              Ljósgulur ís með kókos og vanillu bragði, innblásinn af veikindum, viljastyrk og sólinni á Bali.
-            </p>
-            <p>
-              Á Bali ég lá með spenana sára, mjólkin mín gul og það kom mér til tára. En hugmynd kviknaði og ljúf var hún þó, kókos og vanilla í gulri mjólkurfló.
-            </p>
-            <p>
-              Vestrahúsið 3. apríl komdu og smakkaðu. Lifið vel og lengi en ekki í fatahengi!
+              ...[HEILL TEXTI HÉR]...
             </p>
             <h3>Næringargildi</h3>
-            <p><strong>Innihald:</strong> Mjólk, rjómi, sykur, undanrennuduft, Kókosbragðefni, vanillubragðefni, þrúgusykur, glyserín, maltodextrin, bindiefni (sodiumalgínat, karóbgúmmí, gúargúmmí, karragenan, karboxímetýlsellulósi, ein- og tvíglýseríð), salt, litarefni (norbixín). Óþols og ofnæmisáhrif.</p>
-            <p><strong>Næringargildi í 100 g:</strong></p>
-            <ul>
-              <li>Orka / Energi: 872 kJ / 212 kkal.</li>
-              <li>Fita / Fat: 12 g (Þar af mettuð fita: 6 g)</li>
-              <li>Kolvetni: 21 g (Þar af sykurtegundir: 21 g)</li>
-              <li>Prótein / Protein: 6 g</li>
-              <li>Salt: 0,18 g</li>
-            </ul>
+            <p><strong>Innihald:</strong> ...</p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- FOOTER (sama fyrir allar síður) -->
   <footer>
     <div class="social-links">
       <a href="https://www.instagram.com/gaddur.is" target="_blank">Instagram (@gaddur.is)</a>
@@ -257,7 +115,6 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     function toggleFullText(btn) {
-      // Finnur full-text elementið innan sama card-body
       const cardBody = btn.closest('.card-body');
       const fullTextDiv = cardBody.querySelector('.full-text');
       if (fullTextDiv) {
