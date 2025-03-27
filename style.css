@@ -327,3 +327,14 @@ section {
 .flavor-details.open {
   display: block;
 }
+
+.banner-section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 1000px; /* eða eftir smekk */
+}
+.banner-image {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 8px;
+}
