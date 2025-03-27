@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="is">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaddur - Hafðu samband</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- HEADER -->
   <header>
-    <img src="logo.png" alt="Gaddur Logo" class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Gaddur Logo" class="logo">
+    </a>
     <nav>
       <ul>
         <li><a href="index.html">Heim</a></li>
@@ -22,25 +24,25 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT: Hafðu samband -->
-  <section>
+  <main>
     <h1>Hafðu samband</h1>
-    <p>Viltu vita meira um fyrirtækið, panta ís eða senda okkur kveðju? Endilega hafðu samband!</p>
+    <p>Viltu vita meira um Gaddur, panta ís eða senda okkur kveðju? Endilega hafðu samband!</p>
+
+    <!-- Einfalt form sem opnar mailto: -->
     <form class="contact-form" action="mailto:ronjagaddur@gmail.com" method="post" enctype="text/plain">
       <label for="name">Nafn:</label>
       <input type="text" id="name" name="name" placeholder="Skrifaðu nafnið þitt">
-      
+
       <label for="email">Netfang:</label>
       <input type="email" id="email" name="email" placeholder="Skrifaðu netfangið þitt">
-      
+
       <label for="message">Skilaboð:</label>
       <textarea id="message" name="message" rows="5" placeholder="Skrifaðu skilaboðin hér..."></textarea>
-      
+
       <button type="submit">Senda</button>
     </form>
-  </section>
+  </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="social-links">
       <a href="https://www.instagram.com/gaddur.is" target="_blank">Instagram (@gaddur.is)</a>
