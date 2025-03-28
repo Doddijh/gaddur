@@ -1,15 +1,89 @@
 <!DOCTYPE html>
 <html lang="is">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaddur - Um okkur</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Sérstakur stíll fyrir "Um okkur" síðuna */
+
+    /* Hero/banner efst fyrir "Um okkur" */
+    .hero-banner {
+      background: url('gaddur-about-banner.jpg') center/cover no-repeat;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+    .hero-banner > * {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-banner p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Um okkur efni */
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .about-section {
+      margin-bottom: 2rem;
+    }
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--highlight);
+    }
+    .about-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    /* Call-to-action hnapp */
+    .call-to-action {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .call-to-action a {
+      display: inline-block;
+      background-color: var(--highlight);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .call-to-action a:hover {
+      background-color: #4a6edc;
+    }
+  </style>
 </head>
 <body>
   <!-- HEADER -->
   <header>
-    <img src="logo.png" alt="Gaddur Logo" class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Gaddur Logo" class="logo">
+    </a>
     <nav>
       <ul>
         <li><a href="index.html">Heim</a></li>
@@ -17,20 +91,55 @@
         <li><a href="um-okkur.html" style="color: var(--highlight);">Um okkur</a></li>
         <li><a href="hvar-faest.html">Hvar fæst?</a></li>
         <li><a href="hafa-samband.html">Hafðu samband</a></li>
-        <li><a href="https://shop.gaddur.is" target="_blank">Vefverslun</a></li>
+        <li><a href="https://shop.gaddur.is" target="_blank">Shop</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT: Um okkur -->
-  <section>
+  <!-- HERO/BANNER fyrir "Um okkur" -->
+  <section class="hero-banner">
+    <!-- Ef þú ert ekki með góða mynd geturðu notað einfaldan bakgrunnslit -->
     <h1>Um okkur</h1>
-    <p>
-      Gaddur er vöruþróunarverkefni sem varð til i áfanga um hugmyndir og nýsköpun í Menntaskólanum á Ísafirði veturinn 2025. Mennirnir á bakvið verkefnið voru upphaflega þeir Doddi, Hákon, Pétur og Sverrir en fljótlega bættist ævintýrakýrin og Instagram stjarnan Ronja í hópinn og tók að sér að vera andlit verkefnisins. 
-Fyrsta afurð Gadds er ís sem framleiddur er í samstarfi við snillingana í mjólkurvinnslunni Örnu í Bolungarvík. Markmiðið er að ísinn okkar sé meira en bara hressing eða eftirréttur-hann á að vera upplifun. Kúamykja, Klaufsýking og Júgurbólga eru mögulega ekki lystaukandi nöfn við fyrstu sýn, en vittu til, bragðið er jafn gott og nafnið er vont. 
-Fylgstu endilega með Ronju á Instagram og skoðaðu úrvalið af Ronju varningi í vefversluninni okkar. 
-    </p>
+    <p>Gaddur er vörumerki með karakter – sögunni að baki.</p>
   </section>
+
+  <!-- UM OKKUR INNIHALD -->
+  <main class="about-content">
+    <div class="about-section">
+      <h2>Uppruni og þróun</h2>
+      <p>
+        Gaddur er vöruþróunarverkefni sem varð til í áfanga um hugmyndir og nýsköpun í Menntaskólanum á Ísafirði veturinn 2025.
+      </p>
+      <p>
+        Mennirnir á bakvið verkefnið voru upphaflega þeir Doddi, Hákon, Pétur og Sverrir, en fljótlega bættist ævintýrakýrin og Instagram-stjarnan Ronja í hópinn og tók að sér að vera andlit verkefnisins.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <h2>Fyrsta afurð og samstarf</h2>
+      <p>
+        Fyrsta afurð Gadds er ís sem framleiddur er í samstarfi við snillingana í mjólkurvinnslunni Örnu í Bolungarvík.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <h2>Markmið og bragð</h2>
+      <p>
+        Markmiðið er að ísinn okkar sé meira en bara hressing eða eftirréttur – hann á að vera upplifun. Kúamykja, Klaufsýking og Júgurbólga eru mögulega ekki lystaukandi nöfn við fyrstu sýn, en vittu til, bragðið er jafn gott og nafnið er vont.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <h2>Fylgstu með okkur</h2>
+      <p>
+        Fylgstu endilega með Ronju á Instagram og skoðaðu úrvalið af Ronju varningi í vefversluninni okkar.
+      </p>
+    </div>
+
+    <div class="call-to-action">
+      <a href="brogdin.html">Skoðaðu bragðtegundirnar okkar</a>
+    </div>
+  </main>
 
   <!-- FOOTER -->
   <footer>
